@@ -65,7 +65,7 @@ class LeadScoringEnv(gym.Env):
         if not self.action_space.contains(action):
             raise ValueError(f"Ação inválida: {action}. Esperado: 0, 1 ou 2.")
 
-
+        orcamento, engajamento, tempo_na_base, fit_produto = self.state
 
         if action == 2: 
             if (engajamento + fit_produto) > 1.2:
